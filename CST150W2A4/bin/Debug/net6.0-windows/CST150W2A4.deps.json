@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CST150W2A4/1.0.0": {
+        "runtime": {
+          "CST150W2A4.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CST150W2A4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
