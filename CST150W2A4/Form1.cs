@@ -32,7 +32,7 @@ namespace CST150W2A4
             where T : IComparable,
             IComparable<T>, IConvertible, IEquatable<T>, IFormattable, new() {
             
-            bool isOne = t.ToDouble(null) == 1;
+            bool isOne = Math.Abs(t.ToDouble(null) - 1) < 0.01;
             return $"{(!strip ? (isOne ? "is " : "are ") : "")}{t} {(isOne ? unit : $"{unit}s")}";
         }
 
@@ -67,16 +67,16 @@ namespace CST150W2A4
 #if IMPL2
             switch (seconds)
             {
-                case double _ when seconds < 60:
+                case < 60:
                     flp.Controls.Add(CreateControl<Label>("Seconds", $"There are {secstr}."));
                     break;
-                case double _ when seconds < 3600:
+                case < 3600:
                     flp.Controls.Add(CreateControl<Label>("Minutes", $"There {FormatOrdinal(minutes, "minute")} in {secstr}."));
                     break;
-                case double _ when seconds < 86400:
+                case < 86400:
                     flp.Controls.Add(CreateControl<Label>("Hours", $"There {FormatOrdinal(hours, "hour")} in {secstr}."));
                     break;
-                case double _ when seconds < double.MaxValue:
+                case < double.MaxValue:
                     flp.Controls.Add(CreateControl<Label>("Days", $"There {FormatOrdinal(days, "day")} in {secstr}."));
                     break;
                 default:
