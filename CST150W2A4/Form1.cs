@@ -1,4 +1,4 @@
-﻿#define IMPL2
+﻿#define IMPL1
 using System;
 using System.Windows.Forms;
 
@@ -32,8 +32,8 @@ namespace CST150W2A4
             where T : IComparable,
             IComparable<T>, IConvertible, IEquatable<T>, IFormattable, new() {
             
-            bool isOne = Math.Abs(t.ToDouble(null) - 1) < 0.01;
-            return $"{(!strip ? (isOne ? "is " : "are ") : "")}{t} {(isOne ? unit : $"{unit}s")}";
+            bool isOne = Math.Abs(t.ToDecimal(null) - 1) < 0.01m;
+            return $"{(!strip ? (isOne ? "is " : "are ") : "")}{t.ToDecimal(null):N3} {(isOne ? unit : $"{unit}s")}";
         }
 
         /// <summary>
@@ -55,15 +55,15 @@ namespace CST150W2A4
         private void ShowTime()
         {
             KillControls();
-            if(!double.TryParse(secondsTxt.Text, out double seconds))
+            if(!decimal.TryParse(secondsTxt.Text, out decimal seconds))
             {
                 NativeMethods.Error(this, "Not a number!", "Error");
                 return;
             }
             string secstr = FormatOrdinal(seconds, "second", true);
-            double minutes = Math.Round(seconds / 60, 2);
-            double hours = Math.Round(seconds / 3600, 2);
-            double days = Math.Round(seconds / 86400, 2);
+            decimal minutes = Math.Round(seconds / 60, 3);
+            decimal hours = Math.Round(seconds / 3600, 3);
+            decimal days = Math.Round(seconds / 86400, 3);
 #if IMPL2
             switch (seconds)
             {
@@ -76,7 +76,7 @@ namespace CST150W2A4
                 case < 86400:
                     flp.Controls.Add(CreateControl<Label>("Hours", $"There {FormatOrdinal(hours, "hour")} in {secstr}."));
                     break;
-                case < double.MaxValue:
+                case < decimal.MaxValue:
                     flp.Controls.Add(CreateControl<Label>("Days", $"There {FormatOrdinal(days, "day")} in {secstr}."));
                     break;
                 default:

@@ -1,7 +1,6 @@
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.exe
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.deps.json
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.runtimeconfig.json
-C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.runtimeconfig.dev.json
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.dll
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\ref\CST150W2A4.dll
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\bin\Debug\net6.0-windows\CST150W2A4.pdb
@@ -16,3 +15,4 @@ C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\obj\Debug\net6.0-windows\CST1
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\obj\Debug\net6.0-windows\ref\CST150W2A4.dll
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\obj\Debug\net6.0-windows\CST150W2A4.pdb
 C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\obj\Debug\net6.0-windows\CST150W2A4.genruntimeconfig.cache
+C:\Users\Adonis\source\repos\CST150W2A4\CST150W2A4\obj\Debug\net6.0-windows\CST150W2A4.ImplicitNamespaceImports.cs
